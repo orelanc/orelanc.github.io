@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
   box-sizing: border-box;
@@ -12,6 +12,16 @@ html {
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    line-height: 1.875em;
+    font-size: 15px;
+    font-style: normal;
+    text-align: center;
 }
 
 ol, ul {
@@ -33,19 +43,50 @@ a {
 }
 
 .logo {
-    width: 980px;
+    width: 100%;
+    max-width: 900px;
+    height: 160px;
     margin: 0 auto;
-    padding: 36px 0 21px;
-    text-align: center;
-    line-height: 1.4em;
-    font: 1.5em serif;
-    border-bottom: #444 1px solid;
-    
-    font-family: "Playfair Display", serif;
+    /* border-bottom: #444 1px solid; */
+    position: relative;
+}
+
+.logo_text {
+    display: inline-block;
+    padding: 2px 0;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 22px;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 8px;
+    background-color: #fff;
+    line-height: 12px;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+}
+
+.logo_letter {
+    font-family: "Cinzel Decorative", serif;
+    font-size: 8em;
+}
+
+.logo_letterV {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-85%, 0%);
+    z-index: -1;
+}
+    
+.logo_letterP {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, 60%);
+    z-index: -1;
 }
 
 .nav {
@@ -71,16 +112,6 @@ h1, h2, h3, h4, h5, h6 {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-}
-
-body {
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    line-height: 1.875em;
-    font-size: 15px;
-    font-style: normal;
-    text-align: center;
 }
 
 h1 {
@@ -110,7 +141,7 @@ main {
 }
 
 .home {
-    width: 1200px;
+    max-width: 1200px;
     margin: 80px auto;
     padding: 140px 10%;
     background-color: #fff;
@@ -125,9 +156,13 @@ main {
 .about_section {
     display: flex;
     width: 100%;
-    max-width: 980px;
+    max-width: 1200px;
     margin: 100px auto;
     text-align: start;
+}
+
+.about_section img {
+    width: 50%;
 }
 
 .about_section figcaption {
@@ -256,4 +291,10 @@ footer img {
     margin: 20px 0;
     font-size: 24px;
     font-style: italic;
+}
+
+@media only screen and (max-width: 1000px) {
+    h1 {
+        font-size: 50px;
+    }
 }
