@@ -134,6 +134,7 @@ h6 {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    padding: 0 20px;
 }
 
 h1 {
@@ -449,5 +450,8 @@ footer img {
 }
 
 @media only screen and (max-width: 600px) {
-   
+   .form {
+        width: 100%;
+        margin: 0 5%;
+    }
 }
